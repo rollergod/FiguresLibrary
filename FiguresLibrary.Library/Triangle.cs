@@ -39,7 +39,7 @@ namespace FiguresLibrary.Library
         public override void DisplayInfo()
         {
             base.DisplayInfo();
-            Console.WriteLine($"Perimeter: {Math.Round(GetPerimeter(), 4)}");
+            Console.WriteLine($"Периметр: {Math.Round(GetPerimeter(), 4)}");
             Console.WriteLine($"Является ли треугольник прямоугольным? - {IsRightTriangle()}");
         }
     }

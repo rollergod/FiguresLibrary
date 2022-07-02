@@ -13,7 +13,7 @@ namespace FiguresLibrary.Library
 
         public virtual void DisplayInfo()
         {
-            Console.WriteLine($"Area: {Math.Round(GetSquare(), 2)}");
+            Console.WriteLine($"Площадь: {Math.Round(GetSquare(), 2)}");
             //Console.WriteLine($"Perimeter: {Math.Round(GetPerimetr(), 4)}");
         }
     }
