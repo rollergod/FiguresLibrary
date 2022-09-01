@@ -2,23 +2,23 @@ CREATE DATABASE Magazine
 
 CREATE TABLE Products
 (
-Id int primary key identity,
-ProductName nvarchar(50) not null
+	Id int primary key identity,
+	ProductName nvarchar(50) not null
 )
 
 CREATE TABLE Category
 (
-Id int primary key identity,
-CategoryName nvarchar(50) not null
+	Id int primary key identity,
+	CategoryName nvarchar(50) not null
 )
 
 CREATE TABLE ProductCategories
 (
-ProductId int,
-CategoryId int,
-FOREIGN KEY (ProductId) REFERENCES Products(Id),
-FOREIGN KEY (CategoryId) REFERENCES Category(id),
-PRIMARY KEY(ProductId,CategoryId)
+	ProductId int,
+	CategoryId int,
+	FOREIGN KEY (ProductId) REFERENCES Products(Id),
+	FOREIGN KEY (CategoryId) REFERENCES Category(id),
+	PRIMARY KEY(ProductId,CategoryId)
 )
 
 INSERT INTO Products VALUES
