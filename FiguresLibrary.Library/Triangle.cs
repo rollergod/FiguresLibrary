@@ -15,9 +15,12 @@ namespace FiguresLibrary.Library
 
         public Triangle(double a, double b, double c)
         {
-            A = a;
-            B = b;
-            C = c;
+            if(CheckParameters(A,B,C))
+            {
+                A = a;
+                B = b;
+                C = c;
+            }
         }
 
         public bool IsRightTriangle()
@@ -41,6 +44,21 @@ namespace FiguresLibrary.Library
             base.DisplayInfo();
             Console.WriteLine($"Периметр: {Math.Round(GetPerimeter(), 4)}");
             Console.WriteLine($"Является ли треугольник прямоугольным? - {IsRightTriangle()}");
+        }
+
+        public bool CheckParameters(double a,double b,double c)
+        {
+            if (a < 0 || b < 0 || c < 0)
+            {
+                throw new ArgumentNullException("Введите корректное значение для каждой стороны(>0)");
+            }
+
+            if (a > (b + c) || b > (a + c) || c > (a + b))
+            {
+                throw new ArgumentException("Одна сторона больше чем две другие.");
+            }
+
+            return true;
         }
     }
 }

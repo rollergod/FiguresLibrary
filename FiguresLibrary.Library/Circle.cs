@@ -20,7 +20,5 @@ namespace FiguresLibrary.Library
         {
             return Math.PI * Math.Pow(Radius,2);
         }
-
-
     }
 }
